@@ -1,0 +1,6 @@
+@MSG_MedicalHistory.API_HostAddress = http://localhost:5109
+
+GET {{MSG.MedicalHistory.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

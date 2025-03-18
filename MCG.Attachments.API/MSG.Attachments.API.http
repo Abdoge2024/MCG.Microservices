@@ -1,0 +1,6 @@
+@MSG.Attachments.API_HostAddress = http://localhost:5296
+
+GET {{MSG.Attachments.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

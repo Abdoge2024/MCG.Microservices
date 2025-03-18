@@ -1,0 +1,6 @@
+@MSG.Profile.API_HostAddress = http://localhost:5027
+
+GET {{MCG.Profile.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

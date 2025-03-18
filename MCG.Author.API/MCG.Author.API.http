@@ -1,0 +1,6 @@
+@MCG.Author.API_HostAddress = http://localhost:5073
+
+GET {{MCG.Author.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
