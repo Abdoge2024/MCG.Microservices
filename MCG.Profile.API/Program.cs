@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using MSG.API.Data;
 using MSG.Profile.API.Mappings;
 using MSG.Profile.API.Repositories.Implemantation;
@@ -55,8 +54,6 @@ void ApplyMigration()
         if (db_.Database.GetPendingMigrations().Count() > 0)
         {
             db_.Database.Migrate();
-
         }
     }
-
 }

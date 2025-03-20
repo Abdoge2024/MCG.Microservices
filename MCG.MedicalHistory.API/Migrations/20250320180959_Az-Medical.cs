@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MSG.MedicalHistory.API.Migrations
 {
     /// <inheritdoc />
-    public partial class MedicalHistory : Migration
+    public partial class AzMedical : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,15 +51,15 @@ namespace MSG.MedicalHistory.API.Migrations
             migrationBuilder.InsertData(
                 table: "MCGDoctorsList",
                 columns: new[] { "DoctorsID", "CreatedBy", "DateCreated", "DoctorsName" },
-                values: new object[] { 1, 1, new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local), "Xlander, Xandr" });
+                values: new object[] { 1, 1, new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local), "Xlander, Xandr" });
 
             migrationBuilder.InsertData(
                 table: "PatientMedicalHistory",
                 columns: new[] { "MedicalHistoryID", "CreatedBy", "DateCreated", "Diagnosis", "DoctorId", "Notes", "PatientID", "Treatment", "VisitDate" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local), "this patient has the flu.", 1, "we will check on them later", 1000, "Gave them antibiotics", new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local) },
-                    { 2, 1, new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local), "Patient Has a rash on his feet, red spots.", 1, "we will check on them later", 1000, "Gave them antibiotics", new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local) }
+                    { 1, 1, new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local), "this patient has the flu.", 1, "we will check on them later", 1000, "Gave them antibiotics", new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local) },
+                    { 2, 1, new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local), "Patient Has a rash on his feet, red spots.", 1, "we will check on them later", 1000, "Gave them antibiotics", new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local) }
                 });
         }
 

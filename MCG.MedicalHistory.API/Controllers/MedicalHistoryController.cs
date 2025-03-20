@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
 using MCG.MedicalHisotry.API.Models.Domain;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MSG.MedicalHistory.API.Migrations;
 using MSG.MedicalHistory.API.Models.DTO;
 using MSG.MedicalHistory.API.Repositories.Interface;
-using System.Runtime.CompilerServices;
 
 namespace MSG.MedicalHistory.API.Controllers
 {

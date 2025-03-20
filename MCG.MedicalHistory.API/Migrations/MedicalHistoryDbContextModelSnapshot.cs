@@ -67,25 +67,25 @@ namespace MSG.MedicalHistory.API.Migrations
                         {
                             MedicalHistoryID = 1,
                             CreatedBy = 1,
-                            DateCreated = new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateCreated = new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local),
                             Diagnosis = "this patient has the flu.",
                             DoctorId = 1,
                             Notes = "we will check on them later",
                             PatientID = 1000,
                             Treatment = "Gave them antibiotics",
-                            VisitDate = new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local)
+                            VisitDate = new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             MedicalHistoryID = 2,
                             CreatedBy = 1,
-                            DateCreated = new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateCreated = new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local),
                             Diagnosis = "Patient Has a rash on his feet, red spots.",
                             DoctorId = 1,
                             Notes = "we will check on them later",
                             PatientID = 1000,
                             Treatment = "Gave them antibiotics",
-                            VisitDate = new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local)
+                            VisitDate = new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local)
                         });
                 });
 
@@ -116,7 +116,7 @@ namespace MSG.MedicalHistory.API.Migrations
                         {
                             DoctorsID = 1,
                             CreatedBy = 1,
-                            DateCreated = new DateTime(2025, 3, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateCreated = new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local),
                             DoctorsName = "Xlander, Xandr"
                         });
                 });

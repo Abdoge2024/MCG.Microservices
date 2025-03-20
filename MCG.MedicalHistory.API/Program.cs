@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using MSG.MedicalHistory.API.Data;
-using MSG.MedicalHistory;
 using MSG.MedicalHistory.API.Repositories.Interface;
 using MSG.MSG_MedicalHistory.API.Repositories.Implemantation;
 using MSG.MedicalHistory.API.Mappings;
@@ -11,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services Connection to the API
 builder.Services.AddDbContext<MedicalHistoryDbContext>(option =>
 {
-    option.UseSqlServer(builder.Configuration.GetConnectionString("PatientMedicalHistoryConnectionString"));
+    option.UseSqlServer(builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING"));
 });
 
 builder.Services.AddTransient<IMedicalHistoryRepository, MedicalHistoryRepository>();

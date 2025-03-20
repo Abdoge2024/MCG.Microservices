@@ -9,7 +9,7 @@ namespace MSG.MedicalHistory.API.Data
         {
             var builder = new DbContextOptionsBuilder<MedicalHistoryDbContext>();
             var Configbuilder = WebApplication.CreateBuilder(args);
-            builder.UseSqlServer(Configbuilder.Configuration.GetConnectionString("PatientMedicalHistoryConnectionString"));
+            builder.UseSqlServer(Configbuilder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING"));
             return new MedicalHistoryDbContext(builder.Options);
         }
     }
