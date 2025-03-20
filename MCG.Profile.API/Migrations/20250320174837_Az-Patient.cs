@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MCG.Profile.API.Migrations
 {
     /// <inheritdoc />
-    public partial class Azure_bd : Migration
+    public partial class AzPatient : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -81,8 +81,8 @@ namespace MCG.Profile.API.Migrations
                 columns: new[] { "PatientID", "DateCreated", "PatAddress", "PatCity", "PatDateOfBirth", "PatEmail", "PatEmergencyContact", "PatEmergencyContactEmail", "PatEmergencyContactPhone", "PatFirstName", "PatGender", "PatLastName", "PatMiddleName", "PatPhoneNumber", "PatState", "PatZipCode", "UpdatedDate" },
                 values: new object[,]
                 {
-                    { 1000, new DateTime(2025, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), "6110 Sturbridge lane", "Cumming", "06/07/1935", "ghabdo@att.net", "Janet", "jnet@net.com", "2162251525", "Georges", 0, "Whiteman", "H", "2162251525", "Georgia", 30040, null },
-                    { 1001, new DateTime(2025, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), "6110 Sturbridge lane", "Alpahretta", "06/07/1935", "jacko@att.net", "Ghazi", "Jackt@net.com", "2162251525", "Jack", 0, "Sheriff", "M", "2162251525", "Georgia", 30040, null }
+                    { 1000, new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local), "6110 Sturbridge lane", "Cumming", "06/07/1935", "ghabdo@att.net", "Janet", "jnet@net.com", "2162251525", "Georges", 0, "Whiteman", "H", "2162251525", "Georgia", 30040, null },
+                    { 1001, new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local), "6110 Sturbridge lane", "Alpahretta", "06/07/1935", "jacko@att.net", "Ghazi", "Jackt@net.com", "2162251525", "Jack", 0, "Sheriff", "M", "2162251525", "Georgia", 30040, null }
                 });
 
             migrationBuilder.CreateIndex(

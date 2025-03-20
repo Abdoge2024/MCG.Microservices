@@ -17,7 +17,7 @@ namespace MCG.Profile.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.2")
+                .HasAnnotation("ProductVersion", "9.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -204,7 +204,7 @@ namespace MCG.Profile.API.Migrations
                         new
                         {
                             PatientID = 1000,
-                            DateCreated = new DateTime(2025, 3, 12, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateCreated = new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local),
                             PatAddress = "6110 Sturbridge lane",
                             PatCity = "Cumming",
                             PatDateOfBirth = "06/07/1935",
@@ -223,7 +223,7 @@ namespace MCG.Profile.API.Migrations
                         new
                         {
                             PatientID = 1001,
-                            DateCreated = new DateTime(2025, 3, 12, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateCreated = new DateTime(2025, 3, 20, 0, 0, 0, 0, DateTimeKind.Local),
                             PatAddress = "6110 Sturbridge lane",
                             PatCity = "Alpahretta",
                             PatDateOfBirth = "06/07/1935",

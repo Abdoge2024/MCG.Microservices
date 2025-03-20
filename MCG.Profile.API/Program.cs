@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using MSG.API.Data;
 using MSG.Profile.API.Mappings;
 using MSG.Profile.API.Repositories.Implemantation;
@@ -6,11 +7,13 @@ using MSG.Profile.API.Repositories.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services Connection to the API
+
+//// Add services Connection to the API
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
-    option.UseSqlServer(builder.Configuration.GetConnectionString("PatientProfileConnectionString"));
+    option.UseSqlServer(builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING"));
 });
+
 
 builder.Services.AddTransient<IPatientRepository, PatientRepository>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
@@ -49,7 +52,7 @@ void ApplyMigration()
     using (var scope = app.Services.CreateScope())
     {
         var db_ = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-        if(db_.Database.GetPendingMigrations().Count()>0)
+        if (db_.Database.GetPendingMigrations().Count() > 0)
         {
             db_.Database.Migrate();
 
