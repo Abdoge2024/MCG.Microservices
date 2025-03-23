@@ -9,7 +9,7 @@ namespace MSG.Author.API.Data
         {
             var builder = new DbContextOptionsBuilder<ApplicationDbContext>();
             var Configbuilder = WebApplication.CreateBuilder(args);
-            builder.UseSqlServer(Configbuilder.Configuration.GetConnectionString("AuthorConnectionString"));
+            builder.UseSqlServer(Configbuilder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING"));
             return new ApplicationDbContext(builder.Options);
         }
     }
