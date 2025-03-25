@@ -1,5 +1,6 @@
 ﻿using MCG.Attachments.API.Models.Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace MSG.Attachment.Data
 {
@@ -38,8 +39,8 @@ namespace MSG.Attachment.Data
                 AttachmentID = 1,
                 PatientID = 1000,
                 FileName="MRI_03082025_1048.PDF",
-                FilePath= "E:\\MCG\\API\\MCG.API\\Files",
-                FileType= FileTypesExt.PDF,
+                FilePath = "E:\\MCG\\API\\MCG.API\\Files",
+                FileType = FileTypesExt.PDF,
                 DocType=DocTypes.MRI,
                 DateUploaded=todaysDate,
                 CreatedBy=1

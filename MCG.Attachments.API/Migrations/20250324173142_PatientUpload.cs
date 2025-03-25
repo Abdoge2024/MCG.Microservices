@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MCG.Attachments.API.Migrations
 {
     /// <inheritdoc />
-    public partial class AzAttachments : Migration
+    public partial class PatientUpload : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -71,9 +71,9 @@ namespace MCG.Attachments.API.Migrations
                 columns: new[] { "AttachmentID", "CreatedBy", "DateUploaded", "DocType", "FileName", "FilePath", "FileType", "PatientID" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2025, 3, 21, 0, 0, 0, 0, DateTimeKind.Local), 0, "MRI_03082025_1048.PDF", "E:\\MCG\\API\\MCG.API\\Files", 0, 1000 },
-                    { 2, 1, new DateTime(2025, 3, 21, 0, 0, 0, 0, DateTimeKind.Local), 1, "CAT_03082025_1040.PDF", "E:\\MCG\\API\\MCG.API\\Files", 0, 1001 },
-                    { 3, 1, new DateTime(2025, 3, 21, 0, 0, 0, 0, DateTimeKind.Local), 1, "CAT_03082025_1040.PDF", "E:\\MCG\\API\\MCG.API\\Files", 2, 1001 }
+                    { 1, 1, new DateTime(2025, 3, 24, 0, 0, 0, 0, DateTimeKind.Local), 0, "MRI_03082025_1048.PDF", "E:\\MCG\\API\\MCG.API\\Files", 0, 1000 },
+                    { 2, 1, new DateTime(2025, 3, 24, 0, 0, 0, 0, DateTimeKind.Local), 1, "CAT_03082025_1040.PDF", "E:\\MCG\\API\\MCG.API\\Files", 0, 1001 },
+                    { 3, 1, new DateTime(2025, 3, 24, 0, 0, 0, 0, DateTimeKind.Local), 1, "CAT_03082025_1040.PDF", "E:\\MCG\\API\\MCG.API\\Files", 2, 1001 }
                 });
         }
 

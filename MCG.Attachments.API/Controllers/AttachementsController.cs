@@ -14,19 +14,20 @@ namespace MSG.Attachment.API.Controllers
     public class AttachementsController : ControllerBase
     {
         private readonly IAttachementsRepository _attachmentsRepository;
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IMapper _mapper;
-        private readonly IFormFile _file;
-        public AttachementsController(IAttachementsRepository attachmentsRepository, IMapper mapper,IFormFile formFile)
+     
+        public AttachementsController(IAttachementsRepository attachmentsRepository, IMapper mapper, IWebHostEnvironment webHostEnvironment)
         {
             _attachmentsRepository = attachmentsRepository;
             _mapper = mapper;
-            _file = formFile;
+            _webHostEnvironment = webHostEnvironment;
         }
 
-      /// <summary>
-      /// 
-      /// </summary>
-      /// <returns></returns>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetAllAttachmentsAsync()
         {
@@ -63,16 +64,26 @@ namespace MSG.Attachment.API.Controllers
        /// <param name="PatientAttachmentsDTO"></param>
        /// <returns></returns>
         [HttpPost("Upload")]
-        public async Task<IActionResult> CreateAttachmentsAsync(PatientAttachmentsDTO PatientAttachmentsDTO)
+        public async Task<IActionResult> CreateAttachmentsAsync(IFormFile file)
         {
-            if (PatientAttachmentsDTO.FileName == null || PatientAttachmentsDTO.FileName.Length == 0)
+            var PatientAttachmentsDTO = new PatientAttachmentsDTO();
+            if (file.FileName == null || file.Length == 0)
             {
                 return BadRequest("No File Uploaded");
                     
             }
-            using var memorytream = new MemoryStream();
-            await PatientAttachmentsDTO.FormFile.CopyToAsync(memorytream);
-            var filedata = memorytream.ToArray();
+          
+            string path = Path.Combine(_webHostEnvironment.ContentRootPath, "Files");
+            string filePath=Path.Combine(path,file.FileName);
+
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                 file.CopyTo(stream);
+            };
+
+            PatientAttachmentsDTO.FilePath = filePath;
+            PatientAttachmentsDTO.FileName = file.FileName;
            
             //Map DTO to domain model
             var domain = _mapper.Map<PatientAttachments>(PatientAttachmentsDTO);

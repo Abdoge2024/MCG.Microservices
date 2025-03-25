@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MCG.Attachments.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250324143530_03242025Attach")]
-    partial class _03242025Attach
+    [Migration("20250324173142_PatientUpload")]
+    partial class PatientUpload
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

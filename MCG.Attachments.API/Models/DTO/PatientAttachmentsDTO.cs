@@ -9,8 +9,6 @@ namespace MCG.Attachments.API.Models.DTO
         public int AttachmentID { get; set; }
         public int PatientID { get; set; }
         public string FileName { get; set; }
-
-        public IFormFile FormFile { get; set; }
         public FileTypesExt FileType { get; set; }
         public DocTypes DocType { get; set; }
         public string FilePath { get; set; }
